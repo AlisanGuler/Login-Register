@@ -1,0 +1,100 @@
+/* Body özelleştirme */
+:root{
+    --color-primary: rgba(0,0,0,.5);
+    --color-primary-dark: rgba(0,0,0,.3);
+    --color-secondary: rgb(60,60,190);
+    --color-error: rgb(210,40,40);
+    --color-success: rgb(90,150,40);
+    --border-radius: 5px;
+}
+
+body{
+    background: linear-gradient(var(--color-primary), var(--color-primary-dark)), url(/img/bg1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    width: 400px;
+    max-height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px red;
+    padding: 1rem 2rem ;
+    margin: 1rem;
+    text-align: center;
+
+}
+/* Form Section */
+.form__title{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Freehand', cursive;
+    
+}
+
+.form__input--group{
+    margin-bottom: 1rem;
+}
+.form__input-error-message{ 
+    font-size: .75rem;
+    margin-top: .5rem;
+    color: var(--color-error);
+    display: none ;
+}
+
+.form__input{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: var(--color-primary);
+    outline: none;
+    border: 2px solid #ddd;
+    background-color: #eee;
+    box-sizing: border-box;
+    transition: background .3s, border-color .3s;
+    }
+    .form__input:focus{
+        border-color: var(--color-primary);
+        background-color: white;
+    }
+.form__button{
+        width: 100%;
+        padding: 1rem 2rem;
+        font-weight: bold;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: var(--border-radius);
+        background-color: rgb(72, 30, 114);
+        margin-top: 1.5rem;
+    }
+    .form__button:hover{
+        background-color:rgba(4, 1, 14, 0.959) ;
+    }
+
+.form__text{
+        font-family:serif;
+        font-size: small;
+    }
+    .form__button:active{
+        transform: scale(.95); 
+    }
+
+.form__link{
+
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+    .form__link:hover{
+        text-decoration: underline;
+
+}
+
+.container, .form__input, .form__button{
+    font: 550  1rem 'Roboto', cursive;
+}
